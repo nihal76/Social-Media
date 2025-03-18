@@ -166,7 +166,7 @@ router.post("/like", authMiddleware, async (req, res) => {
        ...post.toObject(),
        username: postuser.username,
        profilePicture: `https://social-media-backend-kq4l.onrender.com/profile/${postuser.profilePicture}`,
-       imageUrl: `https://social-media-backend-kq4l.onrender.com/${post.imageUrl}`,
+       imageUrl: `https://social-media-backend-kq4l.onrender.com/uploads/${post.imageUrl}`,
      };
      console.log('updated ', post)
      res.status(200).json(post)
