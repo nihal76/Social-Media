@@ -3,7 +3,7 @@ const User = require("../models/User");
 const authMiddleware = require("../middleware/auth");
 const router = express.Router();
 
-const baseURL = "http://localhost:5000/";
+const baseURL = "https://social-media-backend-kq4l.onrender.com/";
 // specific user
 router.get('/:userId', authMiddleware, async (req,res) => {
   try {

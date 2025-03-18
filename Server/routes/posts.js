@@ -33,8 +33,8 @@ router.post("/createPost/:userId", upload.single('file') ,authMiddleware, async 
    newPost = {
      ...newPost.toObject(),
      username: user.username,
-     profilePicture: `http://localhost:5000/profile/${user.profilePicture}`,
-     imageUrl: `http://localhost:5000/uploads/${req.file.filename}`,
+     profilePicture: `https://social-media-backend-kq4l.onrender.com/profile/${user.profilePicture}`,
+     imageUrl: `https://social-media-backend-kq4l.onrender.com/uploads/${req.file.filename}`,
    };
    res.status(201).json(newPost)
  } catch (error) {
@@ -60,9 +60,9 @@ router.get("/:profileId", authMiddleware ,async (req, res) => {
         return {
           ...post.toObject(),
           username: frnd.username,
-           profilePicture: `http://localhost:5000/profile/${frnd.profilePicture}`,
-          imageUrl: `http://localhost:5000/uploads/${post.imageUrl}`,
-       }})
+          profilePicture: `https://social-media-backend-kq4l.onrender.com/profile/${frnd.profilePicture}`,
+          imageUrl: `https://social-media-backend-kq4l.onrender.com/uploads/${post.imageUrl}`,
+        };})
        console.log('specific posts..................')
        console.log(posts)
     res.status(200).json(posts);
@@ -88,9 +88,9 @@ router.get("/", authMiddleware, async (req, res) => {
         return {
           ...post.toObject(),
           username: user.username,
-          userId : user._id,
-          profilePicture: `http://localhost:5000/profile/${user.profilePicture}`,
-          imageUrl: `http://localhost:5000/uploads/${post.imageUrl}`,
+          userId: user._id,
+          profilePicture: `https://social-media-backend-kq4l.onrender.com/profile/${user.profilePicture}`,
+          imageUrl: `https://social-media-backend-kq4l.onrender.com/${post.imageUrl}`,
         };
       })
     );
@@ -164,9 +164,9 @@ router.post("/like", authMiddleware, async (req, res) => {
      }
      post = {
        ...post.toObject(),
-       username : postuser.username,
-       profilePicture : `http://localhost:5000/profile/${postuser.profilePicture}`,
-       imageUrl: `http://localhost:5000/uploads/${post.imageUrl}`,
+       username: postuser.username,
+       profilePicture: `https://social-media-backend-kq4l.onrender.com/profile/${postuser.profilePicture}`,
+       imageUrl: `https://social-media-backend-kq4l.onrender.com/${post.imageUrl}`,
      };
      console.log('updated ', post)
      res.status(200).json(post)
@@ -185,10 +185,10 @@ router.post("/comment", authMiddleware, async (req, res) => {
        let post = await Post.findById(postId);
               console.log(post);
        const newComment = {
-          username,
-          profilePicture : `http://localhost:5000/profile/${user.profilePicture}`,
-          comment
-       }
+         username,
+         profilePicture: `https://social-media-backend-kq4l.onrender.com/profile/${user.profilePicture}`,
+         comment,
+       };
        post.comments.unshift(newComment)
        await post.save()
       //  send updated  comments

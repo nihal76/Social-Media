@@ -77,7 +77,7 @@ router.put(
        );
        updatedProfile = {
          ...updatedProfile.toObject(),
-         profilePicture: `http://localhost:5000/profile/${updatedProfile.profilePicture}`,
+         profilePicture: `https://social-media-backend-kq4l.onrender.com/profile/${updatedProfile.profilePicture}`,
        };
        await Post.updateMany({'comments.username' : user.username}, 
         {$set : {
@@ -114,9 +114,9 @@ router.post("/login", async (req, res) => {
       return res.status(400).json({ message: "Invalid Password.try again" });
     }
      user = {
-      ...user.toObject(),
-      profilePicture : `http://localhost:5000/profile/${user.profilePicture}`
-     }
+       ...user.toObject(),
+       profilePicture: `https://social-media-backend-kq4l.onrender.com/profile/${user.profilePicture}`,
+     };
     const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, {
       expiresIn: "1h",
     });
