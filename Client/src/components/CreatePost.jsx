@@ -57,7 +57,7 @@ const CreatePost = ({posts, setposts}) => {
    };
 
     return (
-      <Card sx={{ p: "1em", height: "fit-content" }}>
+      <Card sx={{ p: {xs : '0.5em', md : '1em'} , height: "fit-content" }}>
         <Stack gap={"2em"}>
           {/* create post */}
           <Stack
@@ -90,10 +90,9 @@ const CreatePost = ({posts, setposts}) => {
                   position: "absolute",
                   top: "10em",
                   zIndex: "1",
-      
                 }}
               >
-                <EmojiPicker onEmojiClick={handleEmojiClick}  />
+                <EmojiPicker onEmojiClick={handleEmojiClick} />
               </Box>
             )}
           </Stack>
@@ -102,8 +101,7 @@ const CreatePost = ({posts, setposts}) => {
 
           <Stack
             direction={"row"}
-            gap={{ xs: "1em", sm: "1em", md: "2em" }}
-            justifyContent={"center"}
+            justifyContent={'space-evenly'}
           >
             <Stack
               direction={"row"}
@@ -112,7 +110,11 @@ const CreatePost = ({posts, setposts}) => {
             >
               <label htmlFor="post">
                 <IconButton component="span">
-                  <ImageIcon color="primary" sx={{ fontSize: "1.2em" }} />
+                  <ImageIcon
+                    color="primary"
+                    // sx={{ fontSize: "1.2em" }}
+                    fontSize="small"
+                  />
                 </IconButton>
               </label>
               <Typography>Image</Typography>
@@ -131,7 +133,7 @@ const CreatePost = ({posts, setposts}) => {
               sx={{ cursor: "pointer" }}
             >
               <IconButton>
-                <VideoIcon color="warning" />
+                <VideoIcon color="warning" fontSize="small" />
               </IconButton>
               <Typography>Video</Typography>
             </Stack>
@@ -142,7 +144,7 @@ const CreatePost = ({posts, setposts}) => {
               sx={{ cursor: "pointer" }}
             >
               <IconButton>
-                <LocationIcon color="success" />
+                <LocationIcon color="success" fontSize="small" />
               </IconButton>
               <Typography>Location</Typography>
             </Stack>
