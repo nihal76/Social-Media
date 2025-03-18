@@ -90,7 +90,7 @@ router.get("/", authMiddleware, async (req, res) => {
           username: user.username,
           userId: user._id,
           profilePicture: `https://social-media-backend-kq4l.onrender.com/profile/${user.profilePicture}`,
-          imageUrl: `https://social-media-backend-kq4l.onrender.com/${post.imageUrl}`,
+          imageUrl: `https://social-media-backend-kq4l.onrender.com/uploads/${post.imageUrl}`,
         };
       })
     );
