@@ -34,7 +34,7 @@ The application uses JWT-based authentication for secure login and session manag
 **Installation**
 
 1.Clone the repository:\
-**git clone **
+**git clone https://github.com/nihal76/Social-Media**
 
 2.Navigate to backend Server inside Project Directory and install backend dependencies:\
 **cd Server**\
