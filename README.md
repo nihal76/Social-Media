@@ -55,7 +55,7 @@ PORT=5000**
 
 1. Start the backend Server\
 **cd Server\
-   node index.js**\
+node index.js**
    
 3. Start the frontend development Server\
  **cd Client\
