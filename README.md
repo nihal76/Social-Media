@@ -33,31 +33,32 @@ The application uses JWT-based authentication for secure login and session manag
 
 **Installation**
 
-1.Clone the repository:
+1.Clone the repository:\
 **git clone **
 
-2.Navigate to backend Server inside Project Directory and install backend dependencies:
-**cd Server**
+2.Navigate to backend Server inside Project Directory and install backend dependencies:\
+**cd Server**\
 **npm install**
 
-3.Navigate to Frontend inside Project Directory and install frontend dependencies:
-**cd ..**
-**cd Client
+3.Navigate to Frontend inside Project Directory and install frontend dependencies:\
+**cd ..**\
+**cd Client\
 npm install**
 
-4.Configure Environment Variables:
-**Create a .env file in the server directory and add your MongoDB connection string and JWT secret:**
-**MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret_key
+4.Configure Environment Variables:\
+**Create a .env file in the server directory and add your MongoDB connection string and JWT secret:**\
+**MONGO_URI=your_mongodb_connection_string\
+JWT_SECRET=your_jwt_secret_key\
 PORT=5000**
 
 **Usage**
-1. Start the backend Server
-**   cd Server
-   node index.js**
+
+1. Start the backend Server\
+**   cd Server\
+   node index.js**\
    
-3. Start the frontend development Server
- **   cd Client
+3. Start the frontend development Server\
+ **   cd Client\
    npm run dev**
    
 
