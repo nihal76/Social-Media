@@ -3,6 +3,7 @@
 SnapIt is a fully responsive social media web application built using the MERN stack. It allows users to create profiles, post updates, like and comment on posts, and follow/unfollow other users. 
 The application uses JWT-based authentication for secure login and session management.
 
+
 **Features**
 
 **User Authentication**: Secure login and registration using JSON Web Tokens (JWT).
@@ -18,6 +19,7 @@ The application uses JWT-based authentication for secure login and session manag
 **User Search**: Easily find other users.
 
 **Responsive Design**: Optimized for various screen sizes using Material UI.
+
 
 **Technologies Used**
 
